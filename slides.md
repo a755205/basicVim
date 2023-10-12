@@ -1,6 +1,7 @@
 ---
 theme: seriph
-background: https://source.unsplash.com/collection/94734566/1920x1080
+# background: https://source.unsplash.com/collection/94734566/1920x1080
+background: /public/img/bg-2.jpg
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -16,28 +17,31 @@ title: Welcome to Slidev
 mdc: true
 ---
 
-# Welcome to Slidev
+# VIM
 
-Presentation slides for developers
-
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
-
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="Open in GitHub"
-    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div>
+從新手到入門，掌握VIM的基礎操作
 
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+
+VIM是一款古老但功能強大的文本編輯器，
+它被廣泛用於許多作業系統中，
+並在程式開發者和系統管理員之間受到高度使用，
+但同時， 由於它獨特的操作方式，
+VIM也經常被認為有一定的學習曲線。
+
+今天，我們的目標是打破這個迷思，
+讓每一位參加者都從VIM的新手成長為入門者。
+無論你是完全的初學者，還是之前已有一些VIM的經驗，
+都希望這次的分享可以為你提供有價值的指導。
+
+在接下來的時間裡，
+我們將深入探討VIM的基礎操作，
+從最基礎的移動和編輯，
+到稍微進階的搜尋、
+替換和配置等功能。
+還會分享一些實用的技巧和資源，
+幫助你在VIM的世界中更加得心應手。
+
 -->
 
 ---
