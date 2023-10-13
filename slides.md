@@ -130,27 +130,136 @@ transition: slide-up
 level: 2
 ---
 
-# Navigation
+# 光標移動 
+ Cursor movement
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
 
-## Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+|  1. 基本光標移動:   | 5. 跳轉至特定行:    |       
+| --- | --- | 
+|   <kbd>h</kbd> / <kbd>j</kbd> / <kbd>k</kbd> / <kbd>l</kbd> | <kbd>G</kbd> / <kbd>gg</kbd> / <kbd>:&lbrack;number&rbrack; </kbd> |
+|  2. 單詞移動: |6. 畫面移動:    |
+|   <kbd>w</kbd>  / <kbd>W</kbd>  / <kbd>e</kbd>  / <kbd>E</kbd>  / <kbd>b</kbd>  / <kbd>B</kbd>  |<kbd>ctrl+f</kbd>  / <kbd>ctrl+b</kbd>  / <kbd>ctrl+u</kbd>  / <kbd>ctrl+d</kbd>  / <kbd>zz</kbd>  |
+|  3. 行移動:| 7. 匹配括號跳轉:    |
+|   <kbd>0</kbd> / <kbd>^</kbd> / <kbd>$</kbd>|<kbd>%</kbd>|
+|  4. 段落和區塊移動 |   |
+|   <kbd v-pre> <span v-pre>&lbrace;</span> </kbd>  / <kbd> <span v-pre>&rbrace;</span> </kbd>  / <kbd> <span v-pre>&lbrack;</span> </kbd>  / <kbd> <span v-pre> &rbrack; </span> </kbd>| |
 
 <!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+<!--
+
+[講稿在下面]
+
+1. 基本光標移動:
+h: 向左移動一個字符。
+j: 向下移動一行。
+k: 向上移動一行。
+l: 向右移動一個字符。
+
+2. 單詞移動:
+w: 移動到下一個單詞的開始。
+W: 移動到下一個單詞的開始（考慮標點符號）。
+e: 移動到當前單詞的結尾。
+E: 移動到當前單詞的結尾（考慮標點符號）。
+b: 移動到前一個單詞的開始。
+B: 移動到前一個單詞的開始（考慮標點符號）。
+
+3. 行移動:
+0: 移動到行首。
+^: 移動到當前行的第一個非空白字符。
+$: 移動到行尾。
+4. 段落和區塊移動:
+{: 向上移動到上一個段落的開始。
+}: 向下移動到下一個段落的結尾。
+[: 向上移動到同一級的上一個區塊。
+]: 向下移動到同一級的下一個區塊。
+
+5. 跳轉至特定行:
+G: 移動到文件的最後一行。
+gg: 移動到文件的第一行。
+:[number]: 移動到文件的第[number]行。
+
+6. 畫面移動:
+Ctrl + f: 向前滾動一屏。
+Ctrl + b: 向後滾動一屏。
+Ctrl + u: 向上滾動半屏。
+Ctrl + d: 向下滾動半屏。
+zz: 將當前行置於畫面中央。
+
+7. 匹配括號跳轉:
+%: 跳轉到匹配的括號、中括號或大括號。
+
+[講稿]
+
+今天我要介紹的是Vim中的光標移動。學會這些移動技巧可以大大提高你在Vim中的效率。
+
+首先，我們從基本光標移動開始：
+
+使用 h, j, k, l 你可以在文件中四處移動，就像遊戲中的上下左右按鍵一樣。
+接著是單詞移動：
+
+w 和 W 讓你跳至下一個單詞的開始，而 e 和 E 則移動到單詞的結尾。如果想回到前一個單詞，就使用 b 或 B。
+針對行移動，我們有：
+
+0 移動至行首，^ 跳到該行的第一個非空白字符，而 $ 則是跳至行尾。
+接下來是段落和區塊移動：
+
+使用 { 和 } 可以在段落之間快速跳轉，而 [ 和 ] 則是在區塊間移動。
+要快速跳到文件的某一行，你可以使用跳轉至特定行的命令：
+
+G 會跳至文件尾，gg 則跳至文件頭，如果你想跳到特定的行數，例如第10行，只需輸入 :10。
+對於畫面移動，我們有以下命令：
+
+Ctrl + f 和 Ctrl + b 分別向前和向後滾動整個畫面；Ctrl + u 和 Ctrl + d 則是滾動半個畫面；而 zz 則是將當前行置於畫面中央。
+最後，當你在處理有括號的代碼時，% 允許你在匹配的括號間跳轉。
+
+這就是Vim中的光標移動命令。希望透過今天的分享，你能夠更加熟練地在Vim中移動和編輯。
+-->
+
+
+
+---
+transition: slide-up
+level: 2
+layout: image-right
+image: https://source.unsplash.com/collection/94734566/1920x1080
+---
+
+# Cursor movement
+
+區塊移動
+
+## Key binding 
+
+|     |     |     |  
+| --- | --- | --- |
+| <kbd>h</kbd> / <kbd>j</kbd> / <kbd>k</kbd> / <kbd>l</kbd> | 位移：左, 下, 上, 右| 基本模式 |
+| <kbd>w</kbd>  / <kbd>W</kbd>  / <kbd>e</kbd>  / <kbd>E</kbd>  / <kbd>b</kbd>  / <kbd>B</kbd>  | 光標移動(單字) | 基本模式 |
+
+
+
+
+<!-- https://sli.dev/guide/animations.html#click-animations -->
+
+<!--
+
+
+-->
+
+
 
 ---
 layout: image-right
