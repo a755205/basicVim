@@ -128,6 +128,59 @@ Why I Use Vim
 ---
 transition: slide-up
 level: 2
+layout: default
+---
+
+# 進入和退出VIM
+
+Vim的門檻：如何進入與退出 - 各種保存與離開方法
+
+|     |     |     |     |
+|---------------- | --------------- | --------------- | --------------- |
+|啟動     |     |     |     |
+|vim     |     |     |     |
+|退出     |     |     |     |
+|  :q   | :q!    | :wq    | ZZ    |
+| :x    |    |    |    |
+|保存    |    |    |    |
+| :w    |    |    |    |
+
+
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+<!--
+今天我要和大家講解的是如何進入和退出Vim，這是使用Vim的基礎，也是每位Vim用戶都必須掌握的技能。
+
+首先，要進入Vim並開始編輯一個文件，你只需要在終端機中輸入 vim，後面跟著你想要編輯的文件名，例如 vim filename。這樣，Vim就會啟動，並打開名為filename的文件供你編輯。
+
+當你完成文件的編輯，下一步自然是想要退出Vim。但在Vim中，這並不像其他的編輯器那樣簡單，因為Vim提供了多種退出方法，每種都有其特定的用途。
+
+:q: 這是最基本的退出命令。如果你沒有對文件進行更改，輸入這個命令會直接退出Vim。
+:q!: 如果你進行了更改，但不想保存，只想快速退出，這個命令會是你的選擇。
+:wq: 這個命令表示你想要保存目前的更改，並退出Vim。
+ZZ（大寫的zz）: 這是一個快捷命令，功能與:wq相同，但只需要按兩次按鍵。
+:x: 這個命令也是保存更改並退出，其功能與:wq和ZZ相似。
+學會進入和退出Vim是Vim基礎中的基礎。希望通過今天的分享，你能夠更熟練地使用Vim，並享受它帶來的便利和效率。
+-->
+
+
+
+
+
+---
+transition: slide-up
+level: 2
 ---
 
 # 光標移動 
