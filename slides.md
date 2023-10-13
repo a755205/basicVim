@@ -368,6 +368,81 @@ p：將剪貼板中的內容貼到光標後的位置。
 -->
 
 
+---
+transition: slide-up
+image: https://source.unsplash.com/collection/94734566/1920x1080
+---
+
+# 替換 Substitute
+在vim中，替換操作的命令以 :substitute 開頭，通常縮寫為 :s。"substitute" 在英文中意為 "替換"，因此這個命令名稱非常直觀地描述了其功能
+substitute 
+
+```bash
+
+:s/old/new/	在當前行替換第一個「old」為「new」
+:%s/old/new/g	在整個文檔中替換所有的「old」為「new」
+:5s/old/new/	在第5行替換「old」為「new」
+:3,8s/old/new/g	在第3到第8行之間替換所有的「old」為「new」
+:.,+2s/old/new/g	在當前行及其下兩行中替換所有的「old」為「new」
+```
+
+<!--
+-->
+
+
+
+---
+transition: slide-up
+layout: cover
+background: /public/img/bg-1.jpg
+---
+
+# 一般模式命令組合
+
+
+<!--
+今天我要帶領大家進入 Vim 的一般模式，探索如何高效地組合命令來進行編輯。
+-->
+
+
+
+---
+transition: slide-up
+layout: default
+---
+
+# 命令組合形式
+
+
+ 在正常模式下一個命令的格式是︰
+
+```bash {monaco}
+    [number]   command   object     或者     command [number]   object
+
+
+```
+
+
+     其意是︰
+       number - 代表的是命令執行的次數
+       command - 代表要做的事情，比如 d 代表刪除
+       object - 代表要操作的對象，比如 w 代表單字/單詞，$ 代表到行末等等。
+
+
+<!--
+在 Vim 的正常模式中，命令的組合和結構是非常核心的概念。當你在 Vim 中工作時，你會發現自己經常需要組合數字、命令和對象來完成特定的操作。
+
+這些組合的基礎格式可以是「[number] command object」或者「command [number] object」。
+
+首先，我們看到的「[number]」部分代表命令執行的次數。舉個例子，「3w」中的「3」告訴 Vim，我們希望命令操作三次。
+
+接著是「command」部分，這代表我們要執行的操作。例如，在「d」命令中，它代表「刪除」。
+
+最後是「object」部分，它表示操作的目標或對象。所以，「w」就代表「單詞」，而「$」則代表「到行尾」。這意味著當你輸入命令「d$」時，你實際上是告訴 Vim「刪除到行尾的所有內容」。
+
+總的來說，Vim 的命令組合結構簡單但功能強大。一旦你熟悉了這些基礎的命令組合和格式，你就可以在 Vim 中進行高效的編輯操作。
+-->
+
 
 ---
 layout: image-right
